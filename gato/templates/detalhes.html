@@ -1,0 +1,13 @@
+{% extends 'home.html' %}
+{% block body %}
+    <h3>{{gato.nome}}</h3>
+    <p>Idade {{gato.idade}} anos</p>
+    <p>Raça {{gato.raca}}</p>
+    <p>Cor do gato{{gato.cor}}</p>
+
+    <a href="/atualizar/gato/{{gato.pk}}"><button>Atualizar Cadastro</button></a>
+    <a href="/deletar/gato/{{gato.pk}}"><button style="background-color: brown;">Deletar Gato</button></a>
+    {% if msg%}
+        <h2>{{msg}}</h2>
+    {% endif %}
+{% endblock body %} 

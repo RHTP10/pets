@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+{% block nav %}    
+<nav> 
+        <a href="/"><button >Home</button></a>
+        <a href="/cadastro/gato/"><button>Cadastrar Gato</button></a>
+        <a href="/lista/gato/"><button>Lista de Gatos</button></a>
+
+    </nav>
+    {% endblock nav %}
+    {% block body %}
+    <h1> gato </h1>
+    {% if gat %}
+    {% for gat in gato %}
+    <h4>  {{ gat.nome }} </h4>
+    <p>{{ gat.raca }}</p>
+    <p>{{ gat.idade }}</p>
+    <p>{{ gat.cor }}</p>
+    {% endfor %}
+    {% endif %}
+    {% endblock body %}
+</body>
+</html>

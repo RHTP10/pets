@@ -1,0 +1,9 @@
+{% extends 'home.html' %}
+{% block body %}
+    {% for gato in lista_gatos %}
+    <h4>{{gato.nome}}</h4>
+    <p>Idade {{gato.idade}} anos</p>
+    <p>Cor: {{gato.cor}}</p>
+    <a href="/gato/{{gato.pk}}"><button>Detalhes do Gato</button></a>
+    {% endfor %}
+{% endblock body %}   

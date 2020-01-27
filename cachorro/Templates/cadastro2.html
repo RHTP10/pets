@@ -1,0 +1,8 @@
+{% extends 'home1.html' %}
+{% block body %}
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>Cadastros Cahorro</button>
+    </form>
+{% endblock body %}
